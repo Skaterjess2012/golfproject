@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    .left {
+        margin-top: 20px;
+        background: #0000ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.5em;
+    }
+    .right {
+        background: green;
+        display: flex;
+        justify-content: space-evenly;
+        .column {
+            border: 0.1em solid black;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .cheader {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .holeInput {
+            width: 4.5em;
+            height: 4.5em;
+            border: 0.1em solid black;
+            border-left: 0;
+            border-right: 0;
+            text-align: center;
+            &:focus {
+                background: lightblue;
+            }
+        }
+    }
+}
