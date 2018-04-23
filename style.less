@@ -7,12 +7,23 @@ html, body {
 .container {
     display: flex;
     .left {
-        margin-top: 20px;
-        background: #0000ff;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 0.5em;
+        justify-content: flex-end;
+        height: 100%;
+        .courseDropdown {
+            height: 30px;
+            width: 12em;
+        }
+        .playerLabel {
+            height: 3.78em;
+            background: green;
+            display: flex;
+            align-items: center;
+            &:nth-child(even) {
+                background: blue;
+            }
+        }
     }
     .right {
         background: green;
@@ -27,6 +38,8 @@ html, body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                font-size: 13px;
+                height: 30px;
             }
         }
         .holeInput {

@@ -9,12 +9,23 @@ body {
   display: flex;
 }
 .container .left {
-  margin-top: 20px;
-  background: #0000ff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5em;
+  justify-content: flex-end;
+  height: 100%;
+}
+.container .left .courseDropdown {
+  height: 30px;
+  width: 12em;
+}
+.container .left .playerLabel {
+  height: 3.78em;
+  background: green;
+  display: flex;
+  align-items: center;
+}
+.container .left .playerLabel:nth-child(even) {
+  background: blue;
 }
 .container .right {
   background: green;
@@ -31,6 +42,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 13px;
+  height: 30px;
 }
 .container .right .holeInput {
   width: 4.5em;

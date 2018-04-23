@@ -9,7 +9,12 @@
     </head>
     <body>
         <div class="container">
-            <div class="left"></div>
+            <div class="left">
+                <select onchange="getCourse(this.value)" class="courseDropdown">
+                    <option onclick="$('.right').empty()">Choose a Golf Course</option>
+                </select>
+                <div class="playerContainer"></div>
+            </div>
             <div class="right"></div>
         </div>
     </body>
