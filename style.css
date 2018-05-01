@@ -33,7 +33,7 @@ body {
   justify-content: space-evenly;
 }
 .container .right .column {
-  border: 0.1em solid black;
+  border: 1px solid black;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -43,16 +43,40 @@ body {
   flex-direction: column;
   align-items: center;
   font-size: 13px;
-  height: 30px;
 }
 .container .right .holeInput {
   width: 4.5em;
   height: 4.5em;
-  border: 0.1em solid black;
+  border: 1px solid black;
   border-left: 0;
   border-right: 0;
   text-align: center;
 }
 .container .right .holeInput:focus {
   background: lightblue;
+}
+.container .right .In,
+.container .right .Out {
+  background: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid black;
+}
+.container .right .In .totalBox,
+.container .right .Out .totalBox {
+  width: 3.632em;
+  height: 3.632em;
+  background: purple;
+  border: 1px solid black;
+  border-left: 0;
+  border-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .right .In .tHeader,
+.container .right .Out .tHeader {
+  text-align: center;
+  height: 32px;
 }
