@@ -50,6 +50,9 @@ function createCard(){
 $(document).on('keyup', '.holeInput', function(e){
     let item = $(this);
     let cord = {x:item.attr('x'), y:item.attr('y')};
+    let curItemArrayObj = totalArray[cord.y][cord.x];
+    let rowTotalIn = 0;
+    let rowTotalOut = 0;
     
     if(item.val() % 1 !== 0) {
         item.val('');
@@ -58,6 +61,19 @@ $(document).on('keyup', '.holeInput', function(e){
         item.css('background: transparent');
         if(item.val() !== "") {
             curItemArrayObj.val = Number(item.val());
+            for(let i = 0; i < totalArray[cord.y].length; i++){
+                if (i < 9) {
+                    rowTotalIn = rowTotalIn + totalArray[cord.y][i].val;
+                    rowTotalOut = rowTotalIn;
+                }else {
+                    rowTotalOut = rowTotalOut + totalArray[cord.y][i].val;
+                }
+            }
+            console.log('in:' + rowTotalIn);
+            console.log('out:' + rowTotalOut);
+            console.log($('.in').find('#total' + cord.y));
+            $('.in').find('#total' + cord.y).html(rowTotalIn);
+            $('.out').find('#total' + cord.y).html(rowTotalOut);
         }
     }
 });
