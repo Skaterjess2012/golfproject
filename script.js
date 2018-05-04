@@ -97,7 +97,7 @@ function fillCard(){
 
 function loadPlayers(){
     for(let i = 0; i < numPlayers; i++){
-        $('.playerContainer').append('<div class="playerLabel ' + (i + 1) + '">PlayerLabel' + (i + 1) + '</div>');
+        $('.playerContainer').append('<div class="playerLabel ' + (i + 1) + '" contenteditable="true">PlayerLabel' + (i + 1) + '</div>');
     }
 }
 function getCourse(courseid){
